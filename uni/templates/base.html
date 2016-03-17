@@ -1,0 +1,29 @@
+{% with brand='NOTES' %}
+    <html lang="en">
+
+    <head>
+        <title>{{ brand }}</title>
+
+        {% include 'meta.html' %}
+        {% include 'css.html' %}
+        {% block css %}{% endblock %}
+    </head>
+
+
+    <body {% block body-class %}{% endblock %}>
+    <div id="wrapper">
+        {% block nav %}
+            {% include 'nav.html' with brand=brand %}
+        {% endblock %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+
+    {#{% include 'footer.html' %}#}
+    {% include 'js.html' %}
+
+    </body>
+
+    </html>
+{% endwith %}
