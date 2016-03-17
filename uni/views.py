@@ -5,7 +5,12 @@ import json
 
 
 def index(request):
-    json_data = open('C:/Users/ZerongTony/OneDrive/notes.json')
+    # path to .txt file containing path to .json
+    # did this because .json path is different for two of my machines
+    # will formalise later
+    path = open('C:/Users/ZerongTony/OneDrive/PATH2JSON.txt').read()
+
+    json_data = open(path+'notes.json')
     data = json.load(json_data)
     json_data.close()
 

@@ -10,10 +10,10 @@
                 <a href="#" data-target="#{{ course.coursecode }}-dropdown-toggle" data-toggle="collapse"
                    data-parent=".sidear-nav">{{ course.coursecode }}<span class="caret arrow"></span></a>
                 <ul class="collapse" id="{{ course.coursecode }}-dropdown-toggle">
-                    {% if course.lecture %}
+                    {% if course.lectures %}
                         <li><a href="#">Lectures</a></li>
                     {% endif %}
-                    {% if course.prac %}
+                    {% if course.pracs %}
                         <li><a href="#">Pracs</a></li>
                     {% endif %}
                 </ul>
